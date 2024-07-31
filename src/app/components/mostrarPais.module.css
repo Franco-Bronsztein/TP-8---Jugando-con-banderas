@@ -1,0 +1,48 @@
+/* src/app/components/mostrarPais.module.css */
+
+.Banderas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ocupa toda la altura de la ventana del navegador */
+    text-align: center;
+    background-color: #f0f0f0; /* Fondo claro para mayor contraste */
+    padding: 20px;
+  }
+  
+  .Banderas img {
+    border: 2px solid #ddd; /* Bordes suaves para las imágenes */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    margin-bottom: 20px; /* Espacio debajo de la imagen */
+  }
+  
+  .Banderas p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0; /* Espacio alrededor del texto */
+  }
+  
+  .options {
+    margin-top: 20px;
+  }
+  
+  .options button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .options button:hover {
+    background-color: #0056b3;
+  }
+  
