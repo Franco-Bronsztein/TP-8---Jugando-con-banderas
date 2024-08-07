@@ -1,48 +1,160 @@
-/* src/app/components/mostrarPais.module.css */
-
 .Banderas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Ocupa toda la altura de la ventana del navegador */
-    text-align: center;
-    background-color: #f0f0f0; /* Fondo claro para mayor contraste */
-    padding: 20px;
-  }
-  
-  .Banderas img {
-    border: 2px solid #ddd; /* Bordes suaves para las imágenes */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-    margin-bottom: 20px; /* Espacio debajo de la imagen */
-  }
-  
-  .Banderas p {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin: 10px 0; /* Espacio alrededor del texto */
-  }
-  
-  .options {
-    margin-top: 20px;
-  }
-  
-  .options button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .options button:hover {
-    background-color: #0056b3;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 17px;
+  position: relative;
+}
+
+.Banderas img {
+  max-width: 80%;
+  max-height: 40vh;
+  border: 4px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.Banderas img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.Banderas p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin: 20px 0;
+}
+
+.Banderas button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Banderas button:hover {
+  background-color: #45a049;
+}
+
+.Banderas button:focus {
+  outline: none;
+  box-shadow: 0 0 5px #4CAF50;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.PointsCounter {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.PlayerInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 17px;
+}
+
+.PlayerInput h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.PlayerInput form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.PlayerInput input {
+  font-size: 1rem;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+.PlayerInput button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.PlayerInput button:hover {
+  background-color: #45a049;
+}
+
+.ChangePlayerButton {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f44336;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ChangePlayerButton:hover {
+  background-color: #e53935;
+}
+
+.PlayerHistory {
+  margin-top: 20px;
+  width: 80%;
+}
+
+.PlayerHistory table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.PlayerHistory th, .PlayerHistory td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.PlayerHistory th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
